@@ -1,0 +1,125 @@
+:root{
+	/* 
+ 	vw -> 100vw = 100% of viewport width
+	vh - 100vw = 100% of viewport height
+	*/
+}
+
+.kapsayici{
+	display:none;
+	width:90vh;
+	height:90vh;
+	margin: auto;
+	margin-top: 5vh;
+	font-size:0; /* display inline block yüzünden oluşan boşlukları kaldırmak için */
+	/* border:5px solid red; */
+}
+
+.dokuzluBlok{
+	width:calc(30vh - 6px);
+	height:calc(30vh - 6px);
+	/* background-color:red; */
+	display:inline-block;
+	padding:2px;
+	border: 1px solid #a38e8e;
+}
+
+.kutu{
+	width:calc(10vh - 4px);
+	height:calc(10vh - 4px);
+	/* background-color:yellow; */
+	display:inline-block;
+	border: 1px solid #d7d7d7;
+}
+
+.input [type="text"][disabled]{
+	background-color: red;
+}
+
+.kutu input[type="text"]{
+	background-color:none;
+	border:none;
+	width:calc(10vh - 4px);
+	height:calc(10vh - 4px);
+	margin: 0 auto;
+	display: block;
+	position: fixed;
+	text-align: center;
+	font-size:calc(100vh*6/100);
+	color:#cccccc;
+}
+
+.kutu input[type="text"]:hover{
+	background-color: #e4f0ff;
+	cursor:pointer;
+}
+
+.kutu input[type="text"]:focus{
+	background-color: #c5deff;
+	outline:none;
+	caret-color:#cccccc;
+}
+
+.baslangic-arayuz{
+	width:150px;
+	margin:auto;
+}
+
+.ba-eleman{
+	display:block;
+	margin-top:20px;
+	text-align:center;
+}
+
+.baslik{
+	font-size:40px;
+	font-family:arial;
+}
+
+.buton{
+	border:none;
+	width:150px;
+	height:40px;
+	font-size:20px;
+	border-radius:3px;
+	font-weight:bold;
+	color:white;
+	background-color:#33a35b;
+	padding:2px 20px 2px 20px;
+	box-shadow:2px 2px 6px #3e945d inset;
+}
+
+.buton:hover{
+	cursor:pointer;
+	background-color:#298349;
+	text-shadow:1px 1px 10px #afff4e;	
+}
+
+.buton.disabled{
+	background-color:#95c3a5;
+	box-shadow:none;
+}
+
+.buton.disabled:hover{
+	cursor:not-allowed;
+	text-shadow:none;
+}
+
+.oyun-sonu-mesaj{
+	width:200px;
+	height:200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index:999;
+	display:none;
+}
+
+.oyun-sonu-mesaj span{
+	font-size:18px;
+	font-family:arial;
+	text-shadow:1px 1px 10px #258e7a;
+}

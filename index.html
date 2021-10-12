@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<title>Sudoku</title>
+		<meta charset="UTF-8"/>
+		<script src="js/js.js"></script> 
+		<script src="js/cookie.js"></script>
+		<script src="js/OyunOlustur.js"></script>
+		<script src="js/arayuz-butonlar.js"></script>
+		<script src="js/YonTuslari.js"></script> 
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	</head>
+	
+	<body>
+		<div class="baslangic-arayuz">
+			<span class="ba-eleman baslik">sudoku</span>
+			<button id="oyuna-devam-et-buton" class="ba-eleman buton disabled">Devam Et</button>
+			<button id="yeni-oyun-buton" class="ba-eleman buton yeni-oyun-buton">Yeni Oyun</button>
+		</div>
+		
+		<div class="oyun-sonu-mesaj">
+			<span>Tebrikler Oyun Bitti</span>
+			<button id="yeni-oyun-buton" class="ba-eleman buton yeni-oyun-buton">Yeni Oyun</button>
+		</div>
+		
+		<div class="kapsayici">
+			<div class="dokuzluBlok blok1">
+				<div class="kutu satir1 sutun1" id="kutu1"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir1 sutun2" id="kutu2"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir1 sutun3" id="kutu3"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun1" id="kutu4"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun2" id="kutu5"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun3" id="kutu6"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun1" id="kutu7"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun2" id="kutu8"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun3" id="kutu9"><input type="text" value="" onpaste="return false"></div>
+			</div>
+			<div class="dokuzluBlok blok2">
+				<div class="kutu satir1 sutun4" id="kutu10"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir1 sutun5" id="kutu11"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir1 sutun6" id="kutu12"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun4" id="kutu13"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun5" id="kutu14"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun6" id="kutu15"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun4" id="kutu16"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun5" id="kutu17"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun6" id="kutu18"><input type="text" value="" onpaste="return false"></div>
+			</div>
+			<div class="dokuzluBlok blok3">
+				<div class="kutu satir1 sutun7" id="kutu19"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir1 sutun8" id="kutu20"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir1 sutun9" id="kutu21"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun7" id="kutu22"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun8" id="kutu23"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir2 sutun9" id="kutu24"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun7" id="kutu25"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun8" id="kutu26"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir3 sutun9" id="kutu27"><input type="text" value="" onpaste="return false"></div>
+			</div>
+			<!-- -->
+			<div class="dokuzluBlok blok4">
+				<div class="kutu satir4 sutun1" id="kutu28"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir4 sutun2" id="kutu29"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir4 sutun3" id="kutu30"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun1" id="kutu31"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun2" id="kutu32"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun3" id="kutu33"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun1" id="kutu34"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun2" id="kutu35"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun3" id="kutu36"><input type="text" value="" onpaste="return false"></div>
+			</div>
+			<div class="dokuzluBlok blok5">
+				<div class="kutu satir4 sutun4" id="kutu37"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir4 sutun5" id="kutu38"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir4 sutun6" id="kutu39"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun4" id="kutu40"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun5" id="kutu41"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun6" id="kutu42"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun4" id="kutu43"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun5" id="kutu44"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun6" id="kutu45"><input type="text" value="" onpaste="return false"></div>
+			</div>
+			<div class="dokuzluBlok blok6">
+				<div class="kutu satir4 sutun7" id="kutu46"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir4 sutun8" id="kutu47"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir4 sutun9" id="kutu48"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun7" id="kutu49"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun8" id="kutu50"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir5 sutun9" id="kutu51"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun7" id="kutu52"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun8" id="kutu53"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir6 sutun9" id="kutu54"><input type="text" value="" onpaste="return false"></div>
+			</div>
+			<!-- -->
+			<div class="dokuzluBlok blok7">
+				<div class="kutu satir7 sutun1" id="kutu55"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir7 sutun2" id="kutu56"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir7 sutun3" id="kutu57"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun1" id="kutu58"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun2" id="kutu59"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun3" id="kutu60"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun1" id="kutu61"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun2" id="kutu62"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun3" id="kutu63"><input type="text" value="" onpaste="return false"></div>
+			</div>
+			<div class="dokuzluBlok blok8">
+				<div class="kutu satir7 sutun4" id="kutu64"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir7 sutun5" id="kutu65"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir7 sutun6" id="kutu66"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun4" id="kutu67"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun5" id="kutu68"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun6" id="kutu69"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun4" id="kutu70"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun5" id="kutu71"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun6" id="kutu72"><input type="text" value="" onpaste="return false"></div>
+			</div>
+			<div class="dokuzluBlok blok9">
+				<div class="kutu satir7 sutun7" id="kutu73"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir7 sutun8" id="kutu74"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir7 sutun9" id="kutu75"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun7" id="kutu76"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun8" id="kutu77"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir8 sutun9" id="kutu78"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun7" id="kutu79"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun8" id="kutu80"><input type="text" value="" onpaste="return false"></div>
+				<div class="kutu satir9 sutun9" id="kutu81"><input type="text" value="" onpaste="return false"></div>
+			</div>
+		</div>
+	</body>
+</html>
